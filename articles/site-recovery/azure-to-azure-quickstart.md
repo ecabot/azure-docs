@@ -29,20 +29,16 @@ Log in to the Azure portal at http://portal.azure.com.
 ## Enable replication for the Azure VM
 
 1. In the Azure portal, click **Virtual machines**, and select the VM you want to replicate.
-
-2. In **Settings**, click **Disaster recovery (preview)**.
+2. In **Operations**, click **Disaster recovery (preview)**.
 3. In **Configure disaster recovery** > **Target region** select the target region to which you'll replicate.
-4. For this Quickstart, accept the other default settings.
+4. For this Quickstart, accept the defaults for Target settings, Storage settings, and Replication settings.
 5. Click **Enable replication**. This starts a job to enable replication for the VM.
 
     ![enable replication](media/azure-to-azure-quickstart/enable-replication1.png)
 
-
-
 ## Verify settings
 
-After the replication job has finished, you can check the replication status, modify replication settings
-settings, and test the deployment.
+After the replication job has finished, you can check the replication status, modify replication settings, and test the deployment.
 
 1. In the VM menu, click **Disaster recovery (preview)**.
 2. You can verify replication health, recovery points that have been created, and source and target regions on the map.
@@ -51,19 +47,15 @@ settings, and test the deployment.
 
 ## Clean up resources
 
-The VM in the primary region stops replicating when you disable replication for it:
-
-- The source replication settings are cleaned up automatically.
-- Site Recovery billing for the
-VM also stops.
-
-Stop replication as follows:
+To stop replication:
 
 1. Select the VM.
 2. In **Disaster recovery (preview)**, click **More**.
 3. Click **Disable Replication**.
 
    ![Disable replication](media/azure-to-azure-quickstart/disable2-replication.png)
+
+When replication is disabled, the VM will stop replicating to the target region.  The source replication settings are automatically removed, and Site Recovery billing for the VM also stops.
 
 ## Next steps
 
